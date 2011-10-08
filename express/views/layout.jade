@@ -2,24 +2,44 @@
 html
   head
     title Craig Maslowski - Professional Software Engineer
+    meta(name="google-site-verification", content="AK5zN-ZtBSuweWagovzs02aWWeCFmS4aiVJbjUxvbjc")
+    link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Ubuntu+Condensed|Varela+Round')
     link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
     link(rel='stylesheet', href='/stylesheets/main.css')
   body
+    a(href="https://github.com/craigmaslowski/craigmaslowski.com", title="For this site on GitHub", target="_blank")
+      img#code-corner(src="/images/code-corner.jpg")
+    
     #layout.container
-      header.row
-        nav.page-header.topbar.topbar-inner
-          h3.span8.columns 
-            a(href='/', title='home') Craig Maslowski - Professional Software Engineer
-
+      header.page.row
+        .offset2.span6.columns
+          a(href="/", title="Go to the home page")
+            h1 Craig Maslowski
+            h2 Professional Software Engineer
+            
+        nav.page-header.span6.columns
           ul.nav.secondary-nav
             li
-              a(href='/about', title='More about me') About
+              a(href='/', title='Go to the home page') home
             li
-              a(href='/resume', title='View my resume') Resume
+              a(href='/about', title='Read more about me') about
             li
-              a(href='blog.craigmaslowski.com', title='Check out my blog') Blog
+              a(href='/assets/CraigMaslowskiDetailedResume.pdf', title='View my resume', target="_blank") resume
             li
-              a(href='#', title='Contact Me') Contact
-      #content.row!= body
+                a(href='/projects', title="See what I'm working on") projects
+            li
+              a(href='#', data-controls-modal="contact", data-backdrop="static", title='Contact me') contact
+      
+      hr.offset1.span14.columns
+      
+      section#content.row!= body          
     
-    script(src="/js/jquery")
+    include includes/contact
+    script(src="/js/jquery.min.js")
+    script(src="/js/bootstrap-modal.js")
+    script(src="/js/ga.js")
+    script
+      $(function() {
+        $('#cats').modal({ backdrop: true});
+        $('#contact').modal({ backdrop: true});
+      }); 

@@ -1,2 +1,166 @@
-body
-  background #444
+box-shadow()
+  -webkit-box-shadow arguments
+  -moz-box-shadow arguments
+  box-shadow arguments
+  html.ie8 &,
+  html.ie7 &,
+  html.ie6 &
+    border 2px solid arguments[length(arguments) - 1]
+
+@-webkit-keyframes colors 
+  0% 
+    color #FF5600
+  12% 
+    color #FF8040
+  24% 
+    color #FFA273
+  36% 
+    color #FF8040
+  48% 
+    color #FF5600
+  60%
+    color #BF6030
+  72%
+    color #A63800
+  84%
+    color #BF6030
+  100% 
+    color #FF5600
+
+
+html, body
+  background #fff
+  color #707070
+
+h1, h2, li
+ font-family 'Ubuntu Condensed', helvetica, arial, sans-serif
+
+h1
+  font-size 36px
+
+li
+  font-size 16px
+
+h3, h4
+ font-weight 300
+ font-size 22px
+
+h4
+  font-size 16px
+ 
+p
+  font-weight 200
+
+#code-corner
+  position absolute
+  top 0
+  right 0
+  width 100px
+  height 77px
+  
+#layout
+  header.page 
+    margin-top 20px
+    nav
+      border 0
+      box-shadow 0 0 1px 3x rgba(0, 0, 0, .5)
+
+    h1, h2
+      display inline-block
+      margin-bottom 0px
+
+    h2
+      line-height 18px
+      color #686868
+      margin-left 12px
+    
+    h3, h4
+      font-family 'Varela Round', helvetica, arial, sans-serif
+      color #FF5600
+
+    ul.secondary-nav 
+      li 
+        a
+          line-height 40px
+        a:hover
+          color #3B91EB
+  
+  hr
+    margin-top 0
+    margin-bottom 0
+
+  section#content
+    margin-top 10px
+
+    h3
+      font-style normal
+      -webkit-animation-direction normal
+      -webkit-animation-duration 120s
+      -webkit-animation-iteration-count infinite
+      -webkit-animation-name colors
+      -webkit-animation-timing-function ease
+      font-size 20px
+      text-transform uppercase
+
+    p.first
+      margin-top 12px
+    
+    p
+      margin 16px 0
+      font-size 15px
+      line-height 24px
+      
+      em
+        font-weight 600
+        font-style normal
+    
+    #projects
+      p
+        margin-top 0
+              
+  aside#sidebar
+    margin-left 40px
+    
+    ul.social-icons
+      margin 0
+      
+      li.first
+        a
+          margin-left 0
+      li
+        display: inline-block
+    
+    a.icon
+      margin-left 6px
+    
+    h6
+      margin-top 6px
+     
+    ol
+      list-style none
+    
+    img.avatar
+      margin-top 12px
+      
+    p
+      font-size 13px
+      line-height 18px
+      
+      em
+        font-weight 200
+        font-style italic
+      
+#cats
+  display none
+  width 634px
+  left 45%
+  
+  h6
+    color#404040
+
+#contact
+  display none
+  
+  input.btn
+    margin-right 10px
+    

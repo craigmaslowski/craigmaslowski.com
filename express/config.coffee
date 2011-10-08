@@ -11,11 +11,7 @@ exports = module.exports = (app) ->
     app.use stylus.middleware
       src: "#{__dirname}/views"
       dest: "#{__dirname}/public"
-      compile:  (str, path, fn) ->
-        stylus(str)
-          .set('filename', path)
-          .set('compress', true)
-          .render(fn)
+      compress: true
     app.use express.static "#{__dirname}/public"
 
   app.configure 'development', ->

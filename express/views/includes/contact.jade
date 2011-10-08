@@ -1,0 +1,19 @@
+#contact.modal
+  .modal-header
+    a.close(href="#", title="Close") x
+    h3 Send me a message!
+  .modal-body
+    form#contact-form.form-stacked
+      fieldset
+        .clearfix
+          label(for="name") Name
+          input#name.span6(type="text", placeholder="Enter your name")
+        .clearfix
+          label(for="email") Email Address
+          input#email.span6(type="email", placeholder="Enter your email address")
+        .clearfix
+          label(for="message") Message
+          textarea#message.span6
+        .clearfix
+          input.btn.primary(type="submit", value="Send")
+          a.btn.default(href="#") Cancel

@@ -14,3 +14,7 @@ exports = module.exports = (app) ->
   # about
   app.get '/about', (req, res) ->
     res.render 'about'
+  
+  # projects
+  app.get '/projects', (req, res) ->
+    res.render 'projects'
