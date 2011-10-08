@@ -1,0 +1,25 @@
+!!! html
+html
+  head
+    title Craig Maslowski - Professional Software Engineer
+    link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/main.css')
+  body
+    #layout.container
+      header.row
+        nav.page-header.topbar.topbar-inner
+          h3.span8.columns 
+            a(href='/', title='home') Craig Maslowski - Professional Software Engineer
+
+          ul.nav.secondary-nav
+            li
+              a(href='/about', title='More about me') About
+            li
+              a(href='/resume', title='View my resume') Resume
+            li
+              a(href='blog.craigmaslowski.com', title='Check out my blog') Blog
+            li
+              a(href='#', title='Contact Me') Contact
+      #content.row!= body
+    
+    script(src="/js/jquery")

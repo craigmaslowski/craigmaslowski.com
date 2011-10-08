@@ -1,0 +1,14 @@
+{
+    "name": "craigmaslowski.com"
+  , "version": "0.0.1"
+  , "description": "Craig Maslowski - Professional Software Engineer"
+  , "homepage": "http://craigmaslowski.no.de"
+  , "author": "Craig Maslowski <craig@craigmaslowski.com>"
+  , "contributors": [
+        { "name": "Craig Maslowski", "email": "craig@craigmaslowski.com" }
+    ]
+  , "dependencies": {
+	}
+  , "engines": { "node": ">= 0.4.11" }
+	, "scripts": { "start": "./start" }
+}
