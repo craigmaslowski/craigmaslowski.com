@@ -14,7 +14,8 @@ li{font-size:16px}
 h3,h4{font-weight:300;font-size:22px}
 h4{font-size:16px}
 p{font-weight:200}
-#code-corner{position:absolute;top:0;right:0;width:100px;height:77px}
+#code-corner{position:absolute;top:0;right:0;}
+#code-corner img{width:100px;height:77px}
 #layout header.page{margin-top:20px;}
 #layout header.page nav{border:0;-webkit-box-shadow:0 0 1px 3 x rgba(0,0,0,0.50);-moz-box-shadow:0 0 1px 3 x rgba(0,0,0,0.50);box-shadow:0 0 1px 3 x rgba(0,0,0,0.50);}
 html.ie8 #layout header.page nav,html.ie7 #layout header.page nav,html.ie6 #layout header.page nav{border:2px solid rgba(0,0,0,0.50)}

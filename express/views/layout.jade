@@ -7,8 +7,8 @@ html
     link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
     link(rel='stylesheet', href='/stylesheets/main.css')
   body
-    a(href="https://github.com/craigmaslowski/craigmaslowski.com", title="For this site on GitHub", target="_blank")
-      img#code-corner(src="/images/code-corner.jpg")
+    a#code-corner(href="https://github.com/craigmaslowski/craigmaslowski.com", rel="twipsy", title="Fork this site on GitHub", target="_blank")
+      img(src="/images/code-corner.jpg")
     
     #layout.container
       header.page.row
@@ -20,15 +20,15 @@ html
         nav.page-header.span6.columns
           ul.nav.secondary-nav
             li
-              a(href='/', title='Go to the home page') home
+              a(href='/', rel="twipsy", title='Go to the home page') home
             li
-              a(href='/about', title='Read more about me') about
+              a(href='/about', rel="twipsy", title='Read more about me') about
             li
-              a(href='/assets/CraigMaslowskiDetailedResume.pdf', title='View my resume', target="_blank") resume
+              a(href='/assets/CraigMaslowskiDetailedResume.pdf', rel="twipsy", title='View my resume', target="_blank") resume
             li
-                a(href='/projects', title="See what I'm working on") projects
+                a(href='/projects', rel="twipsy", title="See what I'm working on") projects
             li
-              a(href='#', data-controls-modal="contact", data-backdrop="static", title='Contact me') contact
+              a(href='#', data-controls-modal="contact", data-backdrop="static", rel="twipsy", title='Contact me') contact
       
       hr.offset1.span14.columns
       
@@ -37,9 +37,18 @@ html
     include includes/contact
     script(src="/js/jquery.min.js")
     script(src="/js/bootstrap-modal.js")
+    script(src="/js/bootstrap-twipsy.js")
     script(src="/js/ga.js")
     script
       $(function() {
         $('#cats').modal({ backdrop: true});
         $('#contact').modal({ backdrop: true});
+        
+        var twipsyOptions = {
+          placement: 'below'
+          , delayIn: 700
+        };
+        $('#code-corner').twipsy($.extend({}, twipsyOptions, {placement: 'left', offset: -30}));
+        $('ul.social-icons, a.icon').twipsy(twipsyOptions);
+        $('nav a').twipsy($.extend({}, twipsyOptions, {offset: -20}));
       }); 
