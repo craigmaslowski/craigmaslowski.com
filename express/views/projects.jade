@@ -1,31 +1,43 @@
 #projects.offset2.span9.columns
   h3 Things I never have enough time to work on
 
-  h4 SocketStream
-  p  
-    | <a href="https://github.com/socketstream/socketstream/" target="_blank">SocketStream</a> is a new and exciting, open source realtime web application framework for Node.js.
-    | I'm an active member of the SocketStream community, and a sometimes contributor to the codebase.
+  section.loading 
+      p
+        | Loading Projects From Github
+      
+      p
+        img(src="/images/activity-indicator.gif")
 
-  p
-    | SocketStream is blazing new ground, and definitely something to keep an eye on in the future.
+  section#github-projects
 
-  h4 RPG Universe Online
-  p
-    | RPG Universe Online is a pet project of mine that never seems to get enough love.
-    | I've long had a vision for a web based virtual table top to facilitate playing traditional, pen and paper style role playing games online with your friends.
-  
-  p
-    | I'm building the most recent incarnation of RPG Universe Online using Node.js, SocketStream, and MongoDB. 
-    | The project is currently in private alpha testing. 
-    | You can follow the progress <a href="http://rpguniverseonline.no.de" target="_blank">here</a>.
-    | Please note that some things may not be functional yet.
-  
-  h4 CraigMaslowski.com
-  p
-    | The site you're reading right now. I built it using Node.js, Express, Jade, Stylus, jQuery, and Bootstrap.
-    | All of the source code that makes up CraigMaslowski.com is 
-    | <a href="https://github.com/craigmaslowski/craigmaslowski.com" target="_blank">publically available on GitHub</a>.
-  
+  section#static-projects
+    h4 ElCacheo
+    p 
+      | Experienced JavaScript developers know that traversing the DOM is an expensive operation which is alleviated by caching commonly used lookups. ElCacheo is a library which makes it easy to cache jQuery or Zepto lookups.
+
+    p 
+      a(href="https://github.com/craigmaslowski/elcacheo") View on Github
+
+    h4 Backbone.Factory
+    p
+      | Backbone.Factory is an extension to the Backbone framework. It's used as an alternate method of creating Backbone collections, models, views, and routers with the purpose of automatically adding user defined properties to these objects, sort of like dependency injection.
+    p 
+        a(href="https://github.com/craigmaslowski/backbone.factory") View on Github
+    
+    h4 CraigMaslowski.com
+    p
+      | The site you're reading right now. I built it using Node.js, Express, Jade, Stylus, jQuery, and Bootstrap.
+    p 
+      a(href="https://github.com/craigmaslowski/craigmaslowski.com") View on Github
+
+    h4 RPG Universe Online
+      p
+        | RPG Universe Online is a pet project of mine that never seems to get enough love.
+        | I've long had a vision for a web based virtual table top to facilitate playing traditional, pen and paper style role playing games online with your friends.
+      
+      p
+        | I'm building the most recent incarnation of RPG Universe Online using Node.js, SocketStream, and MongoDB. 
+        | The project is currently in private alpha testing.
 
 aside#sidebar.span4.columns
   include includes/socialicons
@@ -37,3 +49,17 @@ aside#sidebar.span4.columns
     h6 Foolish human, you dare wake the feline overlords?
   .modal-body
     img(src="/images/cats.jpg", alt="Feline overlords deman peace and quiet!")
+
+include includes/templates/github-repo-template
+
+include includes/js-libs
+include includes/js-app-core
+
+script(src="/js/models/github-repo.js")
+script(src="/js/models/github-user.js")
+script(src="/js/collections/github-repos.js")
+script(src="/js/views/projects.js")
+script(src="/js/views/github-repo.js")
+
+
+script(src="/js/app.projects.js")

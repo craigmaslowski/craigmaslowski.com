@@ -7,9 +7,6 @@ html
     link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
     link(rel='stylesheet', href='/stylesheets/main.css')
   body
-    a#code-corner(href="https://github.com/craigmaslowski/craigmaslowski.com", rel="twipsy", title="Fork this site on GitHub", target="_blank")
-      img(src="/images/code-corner.jpg")
-    
     #layout.container
       header.page.row
         .offset2.span6.columns
@@ -35,20 +32,3 @@ html
       section#content.row!= body          
     
     include includes/contact
-    script(src="/js/jquery.min.js")
-    script(src="/js/bootstrap-modal.js")
-    script(src="/js/bootstrap-twipsy.js")
-    script(src="/js/ga.js")
-    script
-      $(function() {
-        $('#cats').modal({ backdrop: true});
-        $('#contact').modal({ backdrop: true});
-        
-        var twipsyOptions = {
-          placement: 'below'
-          , delayIn: 700
-        };
-        $('#code-corner').twipsy($.extend({}, twipsyOptions, {placement: 'left', offset: -30}));
-        $('ul.social-icons, a.icon').twipsy(twipsyOptions);
-        $('nav a').twipsy($.extend({}, twipsyOptions, {offset: -20}));
-      }); 

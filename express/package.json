@@ -1,11 +1,19 @@
 {
-    "name": "application-name"
-  , "version": "0.0.1"
-  , "private": true
-  , "dependencies": {
-      "express": "2.4.7"
-    , "jade": ">= 0.0.1"
-		, "stylus": ">=0.17.0"
-		, "step": ">=0.0.4"
-  }
+  "name": "craigmaslowski.com",
+  "version": "0.0.3-1",
+  "private": true,
+  "dependencies": {
+    "express": ">=2.4.7",
+    "jade": ">=0.0.1",
+    "stylus": ">=0.17.0",
+    "mailer": ">=0.1.20",
+    "emailjs": "0.2.x"
+  },
+  "scripts": {
+    "start": "app.js"
+  },
+  "engines": {
+    "node": "0.6.x"
+  },
+  "subdomain": "craigmaslowski"
 }

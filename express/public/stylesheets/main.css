@@ -8,7 +8,7 @@
 84%{color:#bf6030}
 100%{color:#ff5600}
 }html,body{background:#fff;color:#707070}
-h1,h2,li{font-family:"Ubuntu Condensed",helvetica,arial,sans-serif}
+h1,h2,li{font-family:'Ubuntu Condensed',helvetica,arial,sans-serif}
 h1{font-size:36px}
 li{font-size:16px}
 h3,h4{font-weight:300;font-size:22px}
@@ -17,11 +17,11 @@ p{font-weight:200}
 #code-corner{position:absolute;top:0;right:0;}
 #code-corner img{width:100px;height:77px}
 #layout header.page{margin-top:20px;}
-#layout header.page nav{border:0;-webkit-box-shadow:0 0 1px 3 x rgba(0,0,0,0.50);-moz-box-shadow:0 0 1px 3 x rgba(0,0,0,0.50);box-shadow:0 0 1px 3 x rgba(0,0,0,0.50);}
-html.ie8 #layout header.page nav,html.ie7 #layout header.page nav,html.ie6 #layout header.page nav{border:2px solid rgba(0,0,0,0.50)}
+#layout header.page nav{border:0;-webkit-box-shadow:0 0 1px 3 x rgba(0,0,0,0.5);-moz-box-shadow:0 0 1px 3 x rgba(0,0,0,0.5);box-shadow:0 0 1px 3 x rgba(0,0,0,0.5);}
+html.ie8 #layout header.page nav,html.ie7 #layout header.page nav,html.ie6 #layout header.page nav{border:2px solid rgba(0,0,0,0.5)}
 #layout header.page h1,#layout header.page h2{display:inline-block;margin-bottom:0}
 #layout header.page h2{line-height:18px;color:#686868;margin-left:12px}
-#layout header.page h3,#layout header.page h4{font-family:"Varela Round",helvetica,arial,sans-serif;color:#ff5600}
+#layout header.page h3,#layout header.page h4{font-family:'Varela Round',helvetica,arial,sans-serif;color:#ff5600}
 #layout header.page ul.secondary-nav li a{line-height:40px}
 #layout header.page ul.secondary-nav li a:hover{color:#3b91eb}
 #layout hr{margin-top:0;margin-bottom:0}
@@ -43,5 +43,6 @@ html.ie8 #layout header.page nav,html.ie7 #layout header.page nav,html.ie6 #layo
 #layout aside#sidebar p em{font-weight:200;font-style:italic}
 #cats{display:none;width:634px;left:45%;}
 #cats h6{color:#404040}
-#contact{display:none;}
-#contact input.btn{margin-right:10px}
+#contact {display:none;}
+#contact input.btn{margin-right:10px;width:40px}
+#static-projects {display:none;}
