@@ -8,4 +8,7 @@ The following technologies & frameworks were used to build the site.
 * Jade
 * Stylus
 * jQuery
+* Backbone
+* Backbone.Factory
+* ElCacheo
 * Bootstrap by Twitter
