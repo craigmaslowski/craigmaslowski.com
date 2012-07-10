@@ -1,4 +1,4 @@
-email = require 'emailjs'
+# email = require 'emailjs'
 
 exports = module.exports = (app) ->
   # home page
@@ -24,7 +24,7 @@ exports = module.exports = (app) ->
   # contact
   app.post '/contact', (req, res) ->
     data = req.body
-
+    ###
     email.send({
       host: "smtp.sendgrid.net",
       port : "25",
@@ -41,7 +41,7 @@ exports = module.exports = (app) ->
           res.json {result: 'failure', error: err}, 500
         else
           res.json {result: 'success'})
-    ###
+
     server = email.server.connect({
       user: '', 
       password: '',

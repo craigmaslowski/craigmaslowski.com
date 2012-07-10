@@ -1,13 +1,4 @@
-@-webkit-keyframes colors{0%{color:#ff5600}
-12%{color:#ff8040}
-24%{color:#ffa273}
-36%{color:#ff8040}
-48%{color:#ff5600}
-60%{color:#bf6030}
-72%{color:#a63800}
-84%{color:#bf6030}
-100%{color:#ff5600}
-}html,body{background:#fff;color:#707070}
+html,body{background:url("/images/handmadepaper.png");color:#707070}
 h1,h2,li{font-family:'Ubuntu Condensed',helvetica,arial,sans-serif}
 h1{font-size:36px}
 li{font-size:16px}
@@ -26,10 +17,10 @@ html.ie8 #layout header.page nav,html.ie7 #layout header.page nav,html.ie6 #layo
 #layout header.page ul.secondary-nav li a:hover{color:#3b91eb}
 #layout hr{margin-top:0;margin-bottom:0}
 #layout section#content{margin-top:10px;}
-#layout section#content h3{font-style:normal;-webkit-animation-direction:normal;-webkit-animation-duration:120s;-webkit-animation-iteration-count:infinite;-webkit-animation-name:colors;-webkit-animation-timing-function:ease;font-size:20px;text-transform:uppercase}
+#layout section#content h3{font-size:20px;text-transform:uppercase}
 #layout section#content p.first{margin-top:12px}
-#layout section#content p{margin:16px 0;font-size:15px;line-height:24px;}
-#layout section#content p em{font-weight:600;font-style:normal}
+#layout section#content p{margin:16px 0;font-size:15px;line-height:24px;text-shadow:1px 1px 1px #dcdcdc;}
+#layout section#content p em{text-shadow:1px 1px 1px #a9a9a9;font-weight:300;font-style:normal}
 #layout section#content #projects p{margin-top:0}
 #layout aside#sidebar{margin-left:40px;}
 #layout aside#sidebar ul.social-icons{margin:0;}
@@ -43,6 +34,15 @@ html.ie8 #layout header.page nav,html.ie7 #layout header.page nav,html.ie6 #layo
 #layout aside#sidebar p em{font-weight:200;font-style:italic}
 #cats{display:none;width:634px;left:45%;}
 #cats h6{color:#404040}
-#contact {display:none;}
-#contact input.btn{margin-right:10px;width:40px}
-#static-projects {display: none;}
+#contact{display:none;}
+#contact h3{font-family:'Ubuntu Condensed',helvetica,arial,sans-serif}
+#contact input.btn{margin-right:10px}
+#contact input,#contact textarea{font-size:15px}
+#contact textarea{height:175px}
+#contact label{font-size:15px;font-weight:400;padding:12px 0 8px 0}
+#contact fieldset{padding:0}
+#contact .help-inline{display:none;color:#f00}
+#contact .modal-footer .btn{float:left}
+#contact .form-stacked{padding-left:0}
+#contact .error{display:none}
+#static-projects{display:none}
