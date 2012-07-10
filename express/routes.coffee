@@ -31,7 +31,7 @@ exports = module.exports = (app) ->
       domain: "smtp.sendgrid.net",
       authentication: "login",
       username: 'craigmaslowski.com',
-      password: '4ini.tech',
+      password: '',
       to : "craig@craigmaslowski.com",
       from : data.email,
       subject : "Email from #{data.name} via craigmaslowski.com",
