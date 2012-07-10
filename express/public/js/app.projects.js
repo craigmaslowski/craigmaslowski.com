@@ -9,7 +9,7 @@
 
 	app.start();
 
-	projectsView = new Projects.Views.Projects({ el: '#content' });
+	projectsView = new Projects.Views.Projects({ el: '#projects' });
 	githubUser = new Github.Models.GithubUser({}, { user: user });
 	githubRepos = new Github.Collections.GithubRepos([]);
 	githubUser.options = githubOptions;
@@ -22,9 +22,7 @@
 		projectsView.repos = githubRepos;
 		projectsView.user = githubUser;
 		projectsView.render();
-
 	}).fail(function () {
-		$('#projects .loading').hide();
-		$('#static-projects').show();
+		projectsView.showStatic();
 	});
 })(app.module('projects'), app.module('github'));

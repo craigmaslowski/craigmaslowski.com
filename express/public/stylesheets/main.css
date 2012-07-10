@@ -11,13 +11,13 @@ p{font-weight:200}
 #layout header.page nav{border:0;-webkit-box-shadow:0 0 1px 3 x rgba(0,0,0,0.5);-moz-box-shadow:0 0 1px 3 x rgba(0,0,0,0.5);box-shadow:0 0 1px 3 x rgba(0,0,0,0.5);}
 html.ie8 #layout header.page nav,html.ie7 #layout header.page nav,html.ie6 #layout header.page nav{border:2px solid rgba(0,0,0,0.5)}
 #layout header.page h1,#layout header.page h2{display:inline-block;margin-bottom:0}
-#layout header.page h2{line-height:18px;color:#686868;margin-left:12px}
+#layout header.page h2{line-height:18px;color:#686868}
 #layout header.page h3,#layout header.page h4{font-family:'Varela Round',helvetica,arial,sans-serif;color:#ff5600}
 #layout header.page ul.secondary-nav li a{line-height:40px}
 #layout header.page ul.secondary-nav li a:hover{color:#3b91eb}
 #layout hr{margin-top:0;margin-bottom:0}
-#layout section#content{margin-top:10px;}
-#layout section#content h3{font-size:20px;text-transform:uppercase}
+#layout section#content{margin-top:10px;margin-bottom:50px;}
+#layout section#content h3{color:#ba170b;font-style:normal;font-size:20px;text-transform:uppercase}
 #layout section#content p.first{margin-top:12px}
 #layout section#content p{margin:16px 0;font-size:15px;line-height:24px;text-shadow:1px 1px 1px #dcdcdc;}
 #layout section#content p em{text-shadow:1px 1px 1px #a9a9a9;font-weight:300;font-style:normal}
@@ -45,4 +45,4 @@ html.ie8 #layout header.page nav,html.ie7 #layout header.page nav,html.ie6 #layo
 #contact .modal-footer .btn{float:left}
 #contact .form-stacked{padding-left:0}
 #contact .error{display:none}
-#static-projects{display:none}
+.static-projects{display:none}

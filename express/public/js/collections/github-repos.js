@@ -11,12 +11,15 @@
 		},
 
 		sync: function(method, model, options){  
-			options.timeout = 10000;  
+			options.timeout = 3000;  
 			options.dataType = "jsonp";  
 			return Backbone.sync(method, model, options);  
 		},
 
 		parse: function (resp) {
+			if (resp.data && resp.data.message && resp.data.message === 'Not Found') {
+				return [];
+			}
 			return resp.data;
 		}
 	});
