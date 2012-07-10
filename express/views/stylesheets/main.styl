@@ -29,7 +29,8 @@ box-shadow()
 
 
 html, body
-  background #fff
+  background url(/images/handmadepaper.png)
+
   color #707070
 
 h1, h2, li
@@ -111,9 +112,11 @@ p
       margin 16px 0
       font-size 15px
       line-height 24px
-      
+      text-shadow 1px 1px 1px #dcdcdc
+
       em
-        font-weight 600
+        text-shadow 1px 1px 1px #a9a9a9
+        font-weight 300
         font-style normal
     
     #projects
@@ -163,6 +166,38 @@ p
 #contact
   display none
   
+  h3
+    font-family 'Ubuntu Condensed', helvetica, arial, sans-serif
+  
   input.btn
     margin-right 10px
-    width 40px
+  
+  input, textarea
+    font-size 15px
+    
+  textarea
+    height 175px
+  
+  label
+    font-size 15px
+    font-weight 400
+    padding 12px 0 8px 0
+  
+  fieldset
+    padding 0
+  
+  .help-inline
+    display none
+    color #f00
+  
+  .modal-footer .btn
+    float left
+  
+  .form-stacked
+    padding-left 0
+    
+  .error
+    display none
+
+#static-projects
+  display none
