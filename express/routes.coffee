@@ -1,4 +1,5 @@
 # email = require 'emailjs'
+nodemailer = require 'nodemailer'
 
 exports = module.exports = (app) ->
   # home page
@@ -24,44 +25,28 @@ exports = module.exports = (app) ->
   # contact
   app.post '/contact', (req, res) ->
     data = req.body
-    ###
-    email.send({
-      host: "smtp.sendgrid.net",
-      port : "25",
-      domain: "smtp.sendgrid.net",
-      authentication: "login",
-      username: 'craigmaslowski.com',
-      password: '',
-      to : "craig@craigmaslowski.com",
-      from : data.email,
-      subject : "Email from #{data.name} via craigmaslowski.com",
-      body : data.message },
-      (err, result) -> 
-        if (err)
-          res.json {result: 'failure', error: err}, 500
-        else
-          res.json {result: 'success'})
 
-    server = email.server.connect({
-      user: '', 
-      password: '',
-      host: 'smtp.sendgrid.net', 
-      ssl: false
+    transport = nodemailer.createTransport("SMTP", {
+      service: 'Gmail',
+      auth: 
+        user: '',
+        pass: ''
     })
-    
-    headers = {
-      text: data.message, 
-      from: "#{data.name} <#{data.email}>", 
-      to: 'Craig <craig@craigmaslowski.com>',
-      subject: "Email from #{data.name} via craigmaslowski.com"
-    }
-    
-    message = email.message.create(headers)
 
-    server.send(message, (err, result) -> 
-      if (err)
-        res.json {result: 'failure', error: err}, 500
+    message = { 
+      from: "#{data.name} <#{data.email}>",
+      to: 'Craig <craig@craigmaslowski.com>',
+      subject: "Email from #{data.name} #{data.email} via craigmaslowski.com",
+      headers: {
+          'X-Laziness-level': 1000
+      },
+      text: data.message
+    }
+
+    transport.sendMail(message, (error) ->
+      if (error)
+        res.json {result: 'failure', error: error}, 500
       else
         res.json {result: 'success'}
+      transport.close()
     )
-    ###
