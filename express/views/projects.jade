@@ -1,12 +1,8 @@
 #projects.offset2.span9.columns
   h3 Things I never have enough time to work on
 
-  section.loading 
-      p
-        | Loading Projects From Github
-      
-      p
-        img(src="/images/activity-indicator.gif")
+  p.loading 
+    <img src="/images/activity-indicator.gif" alt="" /> &nbsp; Loading Projects From Github&#8230;
 
   section.github-projects
 
@@ -45,13 +41,6 @@ aside#sidebar.span4.columns
   include includes/socialicons
   include includes/otherprojects
   
-#cats.modal
-  .modal-header
-    a.close(href="#", title="Close") x
-    h6 Foolish human, you dare wake the feline overlords?
-  .modal-body
-    img(src="/images/cats.jpg", alt="Feline overlords deman peace and quiet!")
-
 include includes/templates/github-repo-template
 
 include includes/js-libs
@@ -62,6 +51,5 @@ script(src="/js/models/github-user.js")
 script(src="/js/collections/github-repos.js")
 script(src="/js/views/projects.js")
 script(src="/js/views/github-repo.js")
-
 
 script(src="/js/app.projects.js")
