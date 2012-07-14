@@ -1,12 +1,14 @@
-html,body{background:url("/images/handmadepaper.png");color:#707070}
+html,body{background:url("/images/handmadepaper.png");font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:13px;font-weight:normal;color:#707070}
 h1,h2,li{font-family:'Ubuntu Condensed',helvetica,arial,sans-serif}
 h1{font-size:36px}
 li{font-size:16px}
 h3,h4{font-weight:300;font-size:22px}
 h4{font-size:16px}
 p{font-weight:200}
-#code-corner{position:absolute;top:0;right:0;}
-#code-corner img{width:100px;height:77px}
+.button{font-family:Arial;color:#fdfdfd;font-size:12px;padding:4px;text-decoration:none;-webkit-border-radius:4px;-moz-border-radius:4px;background:#e0e0e0}
+.button:hover{background:#858585}
+.button{font-family:Arial;color:#fdfdfd;font-size:12px;padding:4px;text-decoration:none;-webkit-border-radius:3px;-moz-border-radius:3px;background:#858585;text-shadow:0 0 0 #666}
+.button:hover,a.button:hover{font-family:Arial;color:#fdfdfd;font-size:12px;background:#b0b0b0;text-decoration:none;text-shadow:0 0 0 #666}
 #layout header.page{margin-top:20px;}
 #layout header.page nav{border:0;-webkit-box-shadow:0 0 1px 3 x rgba(0,0,0,0.5);-moz-box-shadow:0 0 1px 3 x rgba(0,0,0,0.5);box-shadow:0 0 1px 3 x rgba(0,0,0,0.5);}
 html.ie8 #layout header.page nav,html.ie7 #layout header.page nav,html.ie6 #layout header.page nav{border:2px solid rgba(0,0,0,0.5)}

@@ -10,7 +10,9 @@ box-shadow()
 
 html, body
   background url(/images/handmadepaper.png)
-
+  font-family "Helvetica Neue",Helvetica,Arial,sans-serif
+  font-size 13px 
+  font-weight normal
   color #707070
 
 h1, h2, li
@@ -31,15 +33,39 @@ h4
  
 p
   font-weight 200
+.button {
+  font-family: Arial;
+  color: #fdfdfd;
+  font-size: 12px;
+  padding: 4px;
+  text-decoration: none;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  background: #e0e0e0;
+}
+.button:hover {
+  background: #858585;
+}
 
-#code-corner
-  position absolute
-  top 0
-  right 0
-  
-  img
-    width 100px
-    height 77px
+
+.button 
+  font-family Arial
+  color #fdfdfd
+  font-size 12px
+  padding 4px
+  text-decoration none
+  -webkit-border-radius 3px
+  -moz-border-radius 3px
+  background #858585
+  text-shadow 0 0 0 #666666
+
+.button:hover, a.button:hover 
+  font-family Arial
+  color #fdfdfd
+  font-size 12px
+  background #b0b0b0
+  text-decoration none
+  text-shadow 0 0 0 #666666
   
 #layout
   header.page 
@@ -103,8 +129,8 @@ p
         margin-top 20px
       
       .static-projects
-        display none        
-  
+        display none
+
   aside#sidebar
     margin-left 40px
     

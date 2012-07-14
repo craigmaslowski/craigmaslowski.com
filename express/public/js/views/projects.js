@@ -2,6 +2,7 @@
 	Projects.Views.Projects = app.factory.View.extend({
 		initialize: function () {
 			_.bindAll(this);
+			this.template = _.template($('#github-repo-template').html());
 			this.views = [];
 		},
 
@@ -11,7 +12,10 @@
 			self.$('.loading').hide();
 			if (self.repos.length) {
 				self.repos.each(function (repo) {
-					self.views.push(new Github.Views.GithubRepo({el: '.github-projects', model: repo}));
+					if (repo.get('fork')) return;
+
+					self.$('.github-projects')
+						.append(self.template(repo.attributes));
 				});
 			} else {
 				self.showStatic();

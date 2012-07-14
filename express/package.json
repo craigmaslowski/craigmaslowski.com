@@ -1,6 +1,6 @@
 {
   "name": "craigmaslowski.com",
-  "version": "0.0.8-2",
+  "version": "0.0.9",
   "private": true,
   "dependencies": {
     "express": "2.5.9",
