@@ -1,7 +1,10 @@
 (function (Contact) {
 	Contact.Views.Contact = app.factory.View.extend({
 		events: {
-			'click .send': 'send'
+			'click .send': 'send',
+			'blur .name': 'validateName',
+			'blur .email': 'validateEmail',
+			'blur .message': 'validateMessage'
 		},
 
 		initialize: function () {
@@ -31,18 +34,56 @@
 			var name = this.cache.get('.name').val(),
 				email = this.cache.get('.email').val(),
 				message = this.cache.get('.message').val(),
-				valid = true;
+				errors = '',
+				valid = false;
 
-			if (name === '' || email === '' || message === '') {
-				console.log('missing a field');
-				valid = false;
+			if (name === '') {
+				errors = ('Please enter your name.<br>');
 			}
-			
-			if (email.search(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i) === -1) {
-				console.log('invalid email');
-				valid = false;
+			if (email === '' || email.search(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i) === -1) {
+				errors += ('Please enter a valid email address.<br>');
 			}
+			if (message === '') {
+				errors += ('Please enter a message.');
+			}
+			if (!valid) {
+				this.reportStatus(errors);
+			}
+
 			return valid;
+		},
+
+		validateName: function () {
+			var name = this.cache.get('.name').val();
+
+			if (name === '') {
+				this.reportStatus('Please enter your name.<br>');
+				this.cache.get('.name').addClass('error');
+			} else {
+				this.cache.get('.name').removeClass('error');
+			}
+		},
+
+		validateEmail: function () {
+			var email = this.cache.get('.email').val();
+
+			if (email === '' || email.search(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i) === -1) {
+				this.reportStatus('Please enter a valid email address.<br>');
+				this.cache.get('.email').addClass('error');
+			} else {
+				this.cache.get('.email').removeClass('error');
+			}
+		},
+
+		validateMessage: function () {
+			var message = this.cache.get('.message').val();
+
+			if (message === '') {
+				this.reportStatus('Please enter a message.');
+				this.cache.get('.message').addClass('error');
+			} else {
+				this.cache.get('.message').removeClass('error');
+			}
 		},
 
 		send: function (e) {
@@ -61,15 +102,30 @@
 					data: data,
 					success: function (data) {
 						self.clearForm();
-						console.log('great success', data);
+						self.reportStatus('Thanks. Your message was sent.');
 					},
 					error: function (data) {
-						console.log('epic failure', data);
+						self.reportStatusAndFadeOut('Oops. Something went wrong. Please try again.');
 					}
 				});
-
-				self.hide();
 			}
+		},
+
+		reportStatus: function (message) {
+			var self = this,
+				$info = self.$('.info')
+
+			$info.html(message).removeClass('fadeInDown fadeOutUp').addClass('fadeInDown');
+		},
+
+		reportStatusAndFadeOut: function (message) {
+			var self = this;
+
+			self.reportStatus(message);
+
+			setTimeout(function () {
+				self.$('.info').removeClass('fadeInDown').addClass('fadeOutUp');
+			}, 10000);
 		}
 	});
 })(app.module('contact'));

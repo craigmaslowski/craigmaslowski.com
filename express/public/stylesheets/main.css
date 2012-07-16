@@ -70,7 +70,9 @@ header.page nav ul li{display:inline;margin-right:10px}
 #content #sidebar #contact{-webkit-animation-duration:1s;-webkit-animation-delay:.2s;-webkit-animation-timing-function:ease;-webkit-animation-fill-mode:both;-moz-animation-duration:1s;-moz-animation-delay:.2s;-moz-animation-timing-function:ease;-moz-animation-fill-mode:both;-ms-animation-duration:1s;-ms-animation-delay:.2s;-ms-animation-timing-function:ease;-ms-animation-fill-mode:both;-o-animation-duration:1s;-o-animation-delay:.2s;-o-animation-timing-function:ease;-o-animation-fill-mode:both;animation-duration:1s;animation-delay:.2s;animation-timing-function:ease;animation-fill-mode:both;}
 #content #sidebar #contact input,#content #sidebar #contact textarea{width:100%}
 #content #sidebar #contact input{margin-bottom:10px}
+#content #sidebar #contact input.error,#content #sidebar #contact textarea.error{-webkit-box-shadow:0 0 6px rgba(166,70,70,0.95);-moz-box-shadow:0 0 6px rgba(166,70,70,0.95);box-shadow:0 0 6px rgba(166,70,70,0.95)}
 #content #sidebar #contact textarea{margin-bottom:7px}
+#content #sidebar #contact .info{-webkit-animation-duration:1s;-webkit-animation-delay:.2s;-webkit-animation-timing-function:ease;-webkit-animation-fill-mode:both;-moz-animation-duration:1s;-moz-animation-delay:.2s;-moz-animation-timing-function:ease;-moz-animation-fill-mode:both;-ms-animation-duration:1s;-ms-animation-delay:.2s;-ms-animation-timing-function:ease;-ms-animation-fill-mode:both;-o-animation-duration:1s;-o-animation-delay:.2s;-o-animation-timing-function:ease;-o-animation-fill-mode:both;animation-duration:1s;animation-delay:.2s;animation-timing-function:ease;animation-fill-mode:both;font-size:.65em;margin-top:7px}
 }@media (min-width: 500px){header.page{padding-left:40px;}
 header.page h1,header.page h2{float:left;display:inline}
 header.page h2{margin-top:6px;margin-left:15px}

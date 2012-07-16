@@ -1,4 +1,4 @@
-# email = require 'emailjs'
+credentials = require './credentials'
 nodemailer = require 'nodemailer'
 
 exports = module.exports = (app) ->
@@ -29,8 +29,8 @@ exports = module.exports = (app) ->
     transport = nodemailer.createTransport("SMTP", {
       service: 'Gmail',
       auth: 
-        user: '',
-        pass: ''
+        user: credentials.gmailUsername,
+        pass: credentials.gmailPassword
     })
 
     message = { 
@@ -46,6 +46,7 @@ exports = module.exports = (app) ->
     transport.sendMail(message, (error) ->
       if (error)
         res.json {result: 'failure', error: error}, 500
+        console.log('Error sending email', error)
       else
         res.json {result: 'success'}
       transport.close()
