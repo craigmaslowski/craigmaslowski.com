@@ -17,12 +17,15 @@ a{color:#5793c9}
 a:hover{color:#b1d2f0}
 input,textarea{border:1px solid #ccc;color:#808080}
 .button{background:#857373;color:#fdfdfd}
-.button:hover{background:#808080;color:#fdfdfd}
+.button:hover{background:#a18d8d;color:#fdfdfd}
 header.page{background-color:#a64646;}
 header.page a{color:#e7cfcf;}
 header.page a h1,header.page a h2{color:#e7cfcf}
 header.page a:hover{color:#ffe9e9;}
 header.page a:hover h1,header.page a:hover h2{color:#ffe9e9}
+#content .projects a:hover{color:#a18d8d;}
+#content .projects a:hover h4{color:#a18d8d}
+#content .projects a.button:hover{color:#fdfdfd}
 body{font:1.125em 'BitstreamVeraSansRoman';}
 h1,h2,h3,h4,h5,h6{font-family:'LeagueGothicRegular',HelveticaNeue,Helvetica,Arial;text-transform:uppercase;}
 h1 span,h2 span,h3 span,h4 span,h5 span,h6 span{text-transform:none}
