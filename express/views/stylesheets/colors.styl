@@ -16,8 +16,10 @@ primary-ultra-light = #808080
 primary-light = #787878
 primary-medium = #707070
 
-secondary-ultra-light = #FFE9E9
+secondary-ultra-bright = #F7EDED
+secondary-ultra-light = #EDE4E4
 secondary-light = #E7CFCF
+secondary-medium-light = #C49B9B
 secondary-medium = #A18D8D
 secondary-medium-dark = #857373
 secondary-dark = #A64646
@@ -27,11 +29,13 @@ tertiary-dark = #5793C9
 
 /* styles */
 body
-	color primary-ultra-light
+	color primary-medium
 
-h1, h2, h3, h5, h6
+h1, h3, h5, h6
 	color secondary-medium
 
+h2
+	color secondary-medium-light
 h4
 	color secondary-medium-dark
 
@@ -58,13 +62,15 @@ header.page
 
 	a
 		color secondary-light
-		h1, h2
+		h1
 			color secondary-light
+		h2
+			color color secondary-medium-light
 
 	a:hover
-		color secondary-ultra-light
+		color secondary-ultra-bright
 		h1, h2
-			color secondary-ultra-light
+			color secondary-ultra-bright
 
 #content
 	.projects
