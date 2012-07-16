@@ -8,3 +8,5 @@
 		var layout = new Layout.Views.Layout({el: 'body'});
 	};
 })(app.module('layout'));
+
+app.start();

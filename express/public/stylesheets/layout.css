@@ -1,0 +1,22 @@
+html{background:url("../images/handmadepaper.png")}
+h4{margin-top:20px}
+p{margin-top:20px}
+header.page{margin-bottom:20px;}
+header.page nav{text-transform:uppercase;}
+header.page nav ul li{display:inline;margin-right:10px}
+#sidebar h6{margin-top:20px}
+#sidebar ul.social-icons li{display:inline;margin-right:8px}
+#contact,.static-projects{display:none}
+.clearfix{clear:both}
+.social-icons img{opacity:.78}
+.button{font-family:'BitstreamVeraSansRoman';color:#fdfdfd;font-size:12px;padding:4px;text-decoration:none;-webkit-border-radius:4px;-moz-border-radius:4px;background:#606060}
+.button:hover{background:#858585;color:#fdfdfd}
+@media (min-width: 1010px){header.page nav{float:right;padding-right:40px;margin-top:20px}
+#content{margin:0 auto;max-width:60em;}
+#content #main{width:70%;float:left;padding:0 40px;}
+#content #main .repo{display:inline-block;width:45%;vertical-align:top;margin-right:5%}
+#content #sidebar{width:20%;float:right}
+}@media (min-width: 500px){header.page{padding-left:40px;}
+header.page h1,header.page h2{float:left;display:inline}
+header.page h2{margin-top:6px;margin-left:15px}
+}

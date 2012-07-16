@@ -1,7 +1,7 @@
 script#github-repo-template(type="text/html")
 	article.repo
-		h4 {{name}}
-		p
+		h4.name {{name}}
+		a.github.button(href="{{html_url}}", target="_blank") Fork on Github
+
+		p.description
 			{{description}}
-		p
-			a.button(href="{{html_url}}", target="_blank") Fork on Github

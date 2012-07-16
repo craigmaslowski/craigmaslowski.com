@@ -1,7 +1,9 @@
-.offset2.span9.columns
-  h3 I &hearts; Coding!
+extends layout
 
-  p.first
+block main
+  h3 I Build Cool Things On The Web
+
+  p
     | My career as a software engineer began in '96, but my experience with the web goes back to '94 when
     | I started building "home pages" of the era.
 
@@ -15,14 +17,8 @@
     | I'm currently building online learning tools with <a href="http://bridgepointeducation.com" title="Visit Bridgepoint Education's site" target="_blank">Bridgepoint Education's</a> in house development team.
   
   p
-    | In my spare time, I can often be found catching up with friends and family, <a href="http://hockeyat37.blogspot.com/" target="_blank">playing hockey</a>, or
+    | In my spare time, I can often be found enjoying time with friends and family, <a href="http://hockeyat37.blogspot.com/" target="_blank">playing hockey</a>, or
     | <a href="http://soundcloud.com/bassore" target="_blank">making music</a>.
 
-aside#sidebar.span4.columns
-  include includes/socialicons
-  include includes/avatar
-  include includes/availability
+block sidebar
   include includes/interestingthings
-
-include includes/js-libs
-include includes/js-app-core

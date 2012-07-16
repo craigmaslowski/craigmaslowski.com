@@ -1,0 +1,53 @@
+/* fonts */
+header-font = 'LeagueGothicRegular', HelveticaNeue, Helvetica, Arial
+body-font-light = 'BitstreamVeraSansRoman'/*, HelveticaNeue, Helvetica, Arial*/
+
+body
+	font 1.125em body-font-light  /* 18px / 16px */
+
+h1, h2, h3, h4, h5, h6
+	font-family header-font
+	text-transform uppercase
+
+	span
+		text-transform none
+
+h1, h2
+	em
+		font-style normal
+
+h1
+	font-size 2.25em /* 36px / 16px */
+
+h2
+	font-size 1.875em /* 30px / 16px */
+
+h3
+	font-size 1.75em /* 24px / 16px */
+
+h4
+	font-size 1.5em /* 24px / 16px */
+
+h5, h6
+	font-size 1.25em    
+
+a
+	text-decoration none
+
+p
+	font-weight normal
+
+#content
+	aside
+		p, li, label
+			font-size .75em
+
+		#contact
+			input
+				font-size .95em
+			textarea
+				font-size .75em
+
+footer.page
+	nav
+		text-transform uppercase

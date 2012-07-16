@@ -1,0 +1,151 @@
+@import variables
+@import functions
+
+html
+	background url(../images/handmadepaper.png)
+
+h4	
+	margin-top 30px
+
+p
+	margin-top 15px
+
+input, textarea
+	border-radius 3px
+
+input
+	height 25px
+
+textarea
+	height 200px
+
+header.page
+	box-shadow 0 2px 6px rgba(50,50,50,.75);
+	margin 20px 0
+
+	nav
+		text-transform uppercase
+		ul
+			li
+				display inline
+				margin-right 10px
+
+#content
+	min-height 100%
+	position relative
+
+	#sidebar
+		h6
+			margin-top 15px
+
+		ul.social-icons 
+			li
+				display inline
+				margin-right 8px
+			img
+				opacity .42
+
+			img:hover
+				opacity .22
+
+		p
+			margin-top 0
+
+.static-projects
+	display none
+
+.clearfix
+	clear both
+
+.button
+	font-family body-font-light
+	font-size 12px
+	padding 4px
+	text-decoration none
+	border-radius 4px
+	cursor pointer
+
+
+/* Full width layout */
+@media (min-width: 1010px)
+	header.page
+		nav
+			float right
+			padding-right 40px
+			margin-top 20px
+
+	#content
+		margin 0 auto
+		max-width 60em
+		min-height 100%
+
+		#main
+			width 70%
+			float left
+			padding 0 40px
+			margin-bottom 50px
+
+			.repo
+				display inline-block
+				width 45%
+				vertical-align top
+				margin-right 5%
+				margin-top 40px
+
+				.name
+					float left
+					margin-top 0
+
+				a.github
+					float right
+
+				p
+					clear both
+
+		#sidebar
+			width 20%
+			float right
+			margin-bottom 50px
+
+			#contact
+				-webkit-animation-duration 1s
+				-webkit-animation-delay .2s
+				-webkit-animation-timing-function ease
+				-webkit-animation-fill-mode both
+				-moz-animation-duration 1s
+				-moz-animation-delay .2s
+				-moz-animation-timing-function ease
+				-moz-animation-fill-mode both
+				-ms-animation-duration 1s
+				-ms-animation-delay .2s
+				-ms-animation-timing-function ease
+				-ms-animation-fill-mode both
+				-o-animation-duration 1s
+				-o-animation-delay .2s
+				-o-animation-timing-function ease
+				-o-animation-fill-mode both
+				animation-duration 1s
+				animation-delay .2s
+				animation-timing-function ease
+				animation-fill-mode both
+
+				input, textarea
+					width 100%
+
+				input
+					margin-bottom 10px
+
+				textarea
+					margin-bottom 7px
+
+@media (min-width: 500px)
+	header.page
+		padding-left 40px
+
+		h1, h2
+			float left
+			display inline
+
+		h2
+			margin-top 6px
+			margin-left 15px

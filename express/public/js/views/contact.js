@@ -1,8 +1,7 @@
 (function (Contact) {
 	Contact.Views.Contact = app.factory.View.extend({
 		events: {
-			'click .send': 'send',
-			'click .cancel': 'cancel'
+			'click .send': 'send'
 		},
 
 		initialize: function () {
@@ -12,17 +11,14 @@
  			this.$el.modal({ backdrop: true});
 		},
 
-		show: function () {
-			this.$el.modal('show');
-		},
+		getAttention: function () {
+			var self = this;
+			self.$el.removeClass().addClass('pulse');
+			self.$('input.name').focus();
 
-		hide: function () {
-			this.$el.modal('hide');
-		},
-
-		cancel: function () {
-			this.hide();
-			this.clearForm();
+			setTimeout(function () {
+				self.$el.removeClass();
+			}, 1300);
 		},
 
 		clearForm: function () {

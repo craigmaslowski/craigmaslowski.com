@@ -1,0 +1,9 @@
+body{color:#808080}
+h1,h2,h3,h4,h5,h6{color:#606060;color:body-color}
+h3{color:#444}
+a{color:#406d95}
+a:hover{color:#919db6}
+header.page{background-color:#a64646;}
+header.page a{color:#e7cfcf;}
+header.page a h1,header.page a h2{color:#e7cfcf}
+header.page a:hover{color:#fff}

@@ -4,9 +4,7 @@
 	var githubRepos,
 		projectsView;
 
-	app.start();
-
-	projectsView = new Projects.Views.Projects({ el: '#projects' });
+	projectsView = new Projects.Views.Projects({ el: '#main .projects' });
 	githubRepos = new Github.Collections.GithubRepos([]);
 	githubRepos.options = { user: 'craigmaslowski' };
 

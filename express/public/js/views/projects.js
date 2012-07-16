@@ -9,15 +9,22 @@
 		render: function () {
 			var self = this;
 
+			// Hide the ajax activity indicator
 			self.$('.loading').hide();
+
+			// Render the view
 			if (self.repos.length) {
 				self.repos.each(function (repo) {
+					// Only list my repos
 					if (repo.get('fork')) return;
 
+					// Inject DOM Elements
 					self.$('.github-projects')
 						.append(self.template(repo.attributes));
 				});
 			} else {
+				// Show static (though likely out of date) projects 
+				// when Github is not responding
 				self.showStatic();
 			}
 		},

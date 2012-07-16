@@ -1,31 +1,39 @@
 !!! html
 html
-  head
-    title Craig Maslowski - Professional Software Engineer
-    meta(name="google-site-verification", content="AK5zN-ZtBSuweWagovzs02aWWeCFmS4aiVJbjUxvbjc")
-    link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Ubuntu+Condensed|Varela+Round')
-    link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
-    link(rel='stylesheet', href='/stylesheets/main.css')
-  body
-    include includes/contact
-    #layout.container
-      header.page.row
-        .offset2.span6.columns
-          a(href="/", title="Go to the home page")
-            h1 Craig Maslowski
-            h2 Professional Software Engineer
+	head
+		title Craig Maslowski - Professional Software Engineer
+		meta(name="viewport", content="width=device-width, maximum-scale=1.0")
+		link(rel='stylesheet', href='/stylesheets/animate.css')
+		link(rel='stylesheet', href='/stylesheets/main.css')
+	body
+	header.page
+		div
+			a(href="/", title="Go to the home page")
+				h1 Craig Maslowski
+				h2 Professional Software Engineer
             
-        nav.span6.columns
-          ul.nav.secondary-nav
-            li
-              a(href='/about', rel="twipsy", title='Read more about me') about
-            li
-              a(href='/projects', rel="twipsy", title="See what I'm working on") projects
-            li
-              a(href='/assets/CraigMaslowskiDetailedResume.pdf', rel="twipsy", title='View my resume', target="_blank") resume
-            li
-              a(href='#', data-controls-modal="contact", data-backdrop="static", rel="twipsy", title='Contact me') contact
-      
-      hr.offset1.span14.columns
-      
-      section#content.row!= body
+		nav
+			ul
+				li
+					a(href='/about', rel="twipsy", title='Read more about me') about
+				li
+					a(href='/projects', rel="twipsy", title="See what I'm working on") projects
+				li
+					a(href='/assets/CraigMaslowskiDetailedResume.pdf', rel="twipsy", title='View my resume', target="_blank") resume
+				li
+					a.contact(href='#contact', rel="twipsy", title='Contact me') contact
+		.clearfix
+    
+	section#content
+		section#main
+			block main
+		aside#sidebar
+			include includes/socialicons
+			block sidebar
+			include includes/availability
+			include includes/contact
+
+block templates
+block scripts
+	include includes/js-libs
+	include includes/js-app-core
