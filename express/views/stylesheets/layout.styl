@@ -58,16 +58,103 @@ header.page
 	clear both
 
 .button
-	font-family body-font-light
 	font-size 12px
 	padding 4px
 	text-decoration none
 	border-radius 4px
 	cursor pointer
 
+/*@media (min-width: 320px) */
+header.page
+	padding-left 20px
+
+#content
+	padding 0 20px
+
+	#sidebar
+		width 100%
+		margin-top 15px
+	
+		.widget
+			float none
+			margin-bottom 30px
+			margin-left 1%
+
+		ul.social-icons
+			float none
+			margin-top 15px
+			
+			li
+				display inline
+
+		#contact
+			float none
+			clear both
+			width 100%
+
+			label
+				display block
+				
+			input, textarea
+				width 100%
+				display block
+	
+
+
+@media (min-width: 730px)
+	header.page
+		padding-left 20px
+
+		h1, h2
+			float left
+			display inline
+
+		h2
+			margin-left 3px
+
+	#content
+		padding 0 20px
+		#sidebar
+			width 100%
+			margin-top 15px
+			.widget
+				width 29%
+				float left
+				margin-bottom 30px
+				margin-left 1%
+
+			ul.social-icons
+				float left
+				margin-top 15px
+				li
+					display block
+
+			#contact
+				animated()
+				width 29%
+				float left
+				clear none
+
+				input, textarea
+					width 100%
+
+				input
+					margin-bottom 10px
+
+				input.error, textarea.error
+					box-shadow 0 0 6px rgba(166,70,70,.95)
+
+				textarea
+					margin-bottom 7px
+
+				.info
+					animated()
+					font-size .65em
+					margin-top 7px
+
 
 /* Full width layout */
-@media (min-width: 1010px)
+@media (min-width: 1060px)
 	header.page
 		nav
 			float right
@@ -106,9 +193,23 @@ header.page
 			width 20%
 			float right
 			margin-bottom 50px
+			margin-top 0
+
+			.widget
+				width 100%
+				float none
+				margin-bottom 0
+				margin-left 0
+
+			ul.social-icons
+				float none
+				margin-top 0
+				li
+					display inline
 
 			#contact
-				animated()
+				animated()	
+				width 100%
 
 				input, textarea
 					width 100%
@@ -126,15 +227,3 @@ header.page
 					animated()
 					font-size .65em
 					margin-top 7px
-					
-@media (min-width: 500px)
-	header.page
-		padding-left 40px
-
-		h1, h2
-			float left
-			display inline
-
-		h2
-			/*margin-top 6px*/
-			margin-left 3px
